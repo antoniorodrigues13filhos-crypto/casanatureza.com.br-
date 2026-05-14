@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina - Convite VIP</title>
+    <title>Lumina - Coleção & Acesso VIP</title>
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
@@ -46,126 +46,208 @@
 
         /* Utilities */
         .glass-panel {
-            background: rgba(24, 24, 27, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(24, 24, 27, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-header {
+            background: rgba(9, 9, 11, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .text-glow {
-            text-shadow: 0 0 30px rgba(244, 63, 94, 0.3);
+            text-shadow: 0 0 30px rgba(244, 63, 94, 0.4);
+        }
+        
+        .card-glow:hover {
+            box-shadow: 0 0 40px rgba(244, 63, 94, 0.15);
         }
     </style>
 </head>
-<body class="bg-zinc-950 text-zinc-50 font-sans antialiased overflow-x-hidden selection:bg-rose-500 selection:text-white">
+<body class="bg-zinc-950 text-zinc-50 font-sans antialiased overflow-x-hidden selection:bg-rose-500 selection:text-white" id="topo">
 
-    <header class="absolute top-0 left-0 right-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-center md:justify-start">
-            <div class="flex items-center gap-2 z-50">
-                <div class="w-10 h-10 rounded-full bg-rose-500 flex items-center justify-center shadow-[0_0_15px_rgba(244,63,94,0.5)]">
-                    <i data-lucide="sparkles" class="w-5 h-5 text-white"></i>
+    <header class="fixed top-0 left-0 right-0 z-50 glass-header transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#topo" class="flex items-center gap-2 z-50 group">
+                <div class="w-8 h-8 rounded-full bg-rose-500 flex items-center justify-center transition-transform group-hover:scale-110 shadow-[0_0_15px_rgba(244,63,94,0.5)]">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-white"></i>
                 </div>
-                <span class="text-2xl font-bold tracking-widest uppercase text-white">Lumina</span>
-            </div>
+                <img src="vitrine-assets/logo-lumina.png.webp" alt="Lumina" class="h-5 w-auto hidden sm:block opacity-90">
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#colecoes" class="text-xs font-semibold text-zinc-400 hover:text-white transition-colors uppercase tracking-[0.2em]">O que está por vir</a>
+            </nav>
         </div>
     </header>
 
     <main>
-        <section class="relative min-h-screen flex items-center justify-center py-20 overflow-hidden">
+        <section class="relative min-h-screen flex items-center justify-center pt-20 pb-12 overflow-hidden border-b border-zinc-900">
             <div class="absolute inset-0 z-0">
-                <img src="https://buildix-user-images.s3.us-east-2.amazonaws.com/ai-generated/4c97bfba-e3b6-4166-909a-97bc77b48835.webp" 
+                <img src="vitrine-assets/hero-bg.webp.jpg" 
                      alt="Moda em movimento" 
-                     class="w-full h-full object-cover object-center animate-ken-burns opacity-50">
-                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-zinc-950/40"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-zinc-950/90 md:via-zinc-950/60 to-transparent"></div>
+                     class="w-full h-full object-cover object-center animate-ken-burns opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-zinc-950/90 md:via-zinc-950/50 to-transparent"></div>
             </div>
 
-            <div class="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-12 md:mt-0">
+            <div class="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-8">
                 
                 <div class="max-w-xl animate-fade-in-up" style="animation-delay: 0.2s;">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 mb-6">
-                        <span class="flex w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
-                        <span class="text-xs font-semibold tracking-widest uppercase text-rose-400">Lançamento Exclusivo</span>
+                    <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-800 backdrop-blur-md mb-8">
+                        <span class="relative flex h-2.5 w-2.5">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
+                        </span>
+                        <span class="text-xs font-semibold tracking-[0.2em] uppercase text-zinc-300">Drop Exclusivo</span>
                     </div>
                     
-                    <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight text-glow">
-                        Redefina seu estilo.<br/>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500 italic font-light">Domine o movimento.</span>
+                    <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-[1.1] text-glow">
+                        Elegância <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-300 to-zinc-600 italic font-light">em Movimento</span>
                     </h1>
                     
-                    <p class="text-lg text-zinc-300 mb-8 leading-relaxed">
-                        A nova coleção <strong>Cápsula Noturna</strong> está chegando. Cadastre-se agora para receber acesso antecipado às peças exclusivas e garanta <strong>15% de desconto</strong> na sua primeira compra.
+                    <p class="text-lg md:text-xl text-zinc-400 mb-8 leading-relaxed font-light">
+                        A coleção <strong>Cápsula Noturna</strong> está prestes a redefinir seu guarda-roupa. Destrave acesso 24h antes de todos e garanta <strong>15% OFF</strong>.
                     </p>
 
-                    <ul class="space-y-4 text-zinc-400 mb-8 hidden md:block">
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-rose-500"></i>
-                            Acesso VIP 24 horas antes do público geral.
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-rose-500"></i>
-                            Desconto exclusivo de 15% enviado no WhatsApp.
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-rose-500"></i>
-                            Peças em série limitada e exclusivas.
-                        </li>
-                    </ul>
+                    <div class="hidden md:flex gap-8 text-sm text-zinc-500">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-white font-semibold text-xl">01</span>
+                            <span class="uppercase tracking-widest text-[10px]">Cadastre-se</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <span class="text-white font-semibold text-xl">02</span>
+                            <span class="uppercase tracking-widest text-[10px]">Receba o Link VIP</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <span class="text-rose-500 font-semibold text-xl">03</span>
+                            <span class="uppercase tracking-widest text-[10px]">Domine a Noite</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="w-full max-w-md mx-auto animate-fade-in-up" style="animation-delay: 0.4s;">
-                    <div class="glass-panel rounded-3xl p-8 shadow-2xl relative overflow-hidden">
-                        <div class="absolute -top-20 -right-20 w-40 h-40 bg-rose-500/20 rounded-full blur-3xl"></div>
+                <div class="w-full max-w-md mx-auto lg:ml-auto animate-fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="glass-panel rounded-[2rem] p-8 md:p-10 shadow-2xl relative">
+                        <div class="absolute top-0 right-0 w-full h-1/2 bg-gradient-to-b from-rose-500/10 to-transparent rounded-t-[2rem] pointer-events-none"></div>
                         
                         <div class="text-center mb-8 relative z-10">
-                            <h2 class="text-2xl font-bold text-white mb-2">Garantir Meu Acesso VIP</h2>
-                            <p class="text-sm text-zinc-400">Preencha os dados abaixo para destravar seu benefício.</p>
+                            <h2 class="text-2xl font-semibold text-white tracking-tight mb-2">Convite Restrito</h2>
+                            <p class="text-sm text-zinc-400">Junte-se à lista para receber sua vantagem exclusiva.</p>
                         </div>
 
-                        <form action="SEU_WEBHOOK_URL_AQUI" method="POST" class="relative z-10 flex flex-col gap-4">
-                            <div>
-                                <label for="nome" class="sr-only">Seu nome</label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                        <i data-lucide="user" class="w-5 h-5 text-zinc-500"></i>
-                                    </div>
-                                    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" 
-                                           class="w-full bg-zinc-900/80 border border-zinc-700 text-white rounded-xl py-3.5 pl-12 pr-4 focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition-colors">
+                        <form action="SEU_WEBHOOK_URL_AQUI" method="POST" class="relative z-10 flex flex-col gap-5">
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <i data-lucide="user" class="w-5 h-5 text-zinc-500"></i>
                                 </div>
+                                <input type="text" id="nome" name="nome" required placeholder="Seu nome" 
+                                       class="w-full bg-zinc-900/50 border border-zinc-700/50 text-white rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:border-rose-500 focus:bg-zinc-900 transition-all placeholder:text-zinc-600">
                             </div>
                             
-                            <div>
-                                <label for="email" class="sr-only">Seu e-mail</label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                        <i data-lucide="mail" class="w-5 h-5 text-zinc-500"></i>
-                                    </div>
-                                    <input type="email" id="email" name="email" required placeholder="seu.melhor@email.com" 
-                                           class="w-full bg-zinc-900/80 border border-zinc-700 text-white rounded-xl py-3.5 pl-12 pr-4 focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition-colors">
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <i data-lucide="mail" class="w-5 h-5 text-zinc-500"></i>
                                 </div>
+                                <input type="email" id="email" name="email" required placeholder="Seu melhor e-mail" 
+                                       class="w-full bg-zinc-900/50 border border-zinc-700/50 text-white rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:border-rose-500 focus:bg-zinc-900 transition-all placeholder:text-zinc-600">
                             </div>
 
-                            <div>
-                                <label for="whatsapp" class="sr-only">Seu WhatsApp</label>
-                                <div class="relative">
-                                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                        <i data-lucide="smartphone" class="w-5 h-5 text-zinc-500"></i>
-                                    </div>
-                                    <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(00) 00000-0000" 
-                                           class="w-full bg-zinc-900/80 border border-zinc-700 text-white rounded-xl py-3.5 pl-12 pr-4 focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition-colors">
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <i data-lucide="smartphone" class="w-5 h-5 text-zinc-500"></i>
                                 </div>
+                                <input type="tel" id="whatsapp" name="whatsapp" required placeholder="WhatsApp com DDD" 
+                                       class="w-full bg-zinc-900/50 border border-zinc-700/50 text-white rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:border-rose-500 focus:bg-zinc-900 transition-all placeholder:text-zinc-600">
                             </div>
 
-                            <button type="submit" class="w-full bg-rose-500 text-white font-bold text-lg py-4 rounded-xl hover:bg-rose-600 hover:shadow-[0_0_20px_rgba(244,63,94,0.4)] transition-all duration-300 mt-2 flex justify-center items-center gap-2 group">
-                                Quero meu Desconto
+                            <button type="submit" class="w-full bg-white text-zinc-950 font-bold text-lg py-4 rounded-xl hover:bg-rose-500 hover:text-white hover:shadow-[0_0_30px_rgba(244,63,94,0.3)] transition-all duration-500 mt-2 flex justify-center items-center gap-2 group">
+                                Destravar Acesso
                                 <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                             </button>
                             
-                            <p class="text-xs text-zinc-500 text-center mt-3 flex items-center justify-center gap-1">
-                                <i data-lucide="lock" class="w-3 h-3"></i>
-                                Seus dados estão 100% seguros.
+                            <p class="text-[11px] text-zinc-500 text-center uppercase tracking-wider mt-2">
+                                Suas informações estão protegidas.
                             </p>
                         </form>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#colecoes" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 opacity-50 hover:opacity-100 transition-opacity">
+                <span class="text-[10px] uppercase tracking-[0.3em] font-medium">Sneak Peek</span>
+                <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce text-rose-500"></i>
+            </a>
+        </section>
+
+        <section id="colecoes" class="py-32 bg-zinc-950 relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
+                    <div class="max-w-2xl">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">O que está em <span class="italic font-light text-zinc-500">jogo.</span></h2>
+                        <p class="text-zinc-400 text-lg font-light leading-relaxed">Conheça as peças que farão parte do drop exclusivo. Design cirúrgico e matérias-primas que elevam a sua presença.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[450px]">
+                    
+                    <div class="group relative overflow-hidden rounded-3xl md:col-span-2 bg-zinc-900 border border-zinc-800/50 card-glow transition-all duration-700 cursor-pointer">
+                        <img src="vitrine-assets/linha-urbana.webp.jpg" 
+                             alt="Linha Urbana" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105 opacity-60 group-hover:opacity-100 grayscale-[30%] group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-700"></div>
+                        
+                        <div class="absolute bottom-0 left-0 p-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                            <span class="inline-block px-4 py-1.5 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-[10px] font-semibold uppercase tracking-widest text-zinc-300 mb-4">Essencial Elevado</span>
+                            <h3 class="text-3xl font-bold mb-3 text-white">Linha Urbana</h3>
+                            <div class="flex items-center justify-between">
+                                <p class="text-zinc-400 font-light max-w-sm">Alfaiataria desconstruída para transitar entre o estúdio e as ruas.</p>
+                                <a href="#topo" class="w-12 h-12 rounded-full bg-white text-zinc-950 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 hover:bg-rose-500 hover:text-white">
+                                    <i data-lucide="lock" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl bg-zinc-900 border border-zinc-800/50 card-glow transition-all duration-700 cursor-pointer">
+                        <img src="vitrine-assets/acessorios.webp.jpg" 
+                             alt="Acessórios" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105 opacity-60 group-hover:opacity-100 grayscale-[30%] group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-700"></div>
+                        
+                        <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                            <span class="inline-block px-4 py-1.5 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-[10px] font-semibold uppercase tracking-widest text-zinc-300 mb-4">Couro Premium</span>
+                            <h3 class="text-2xl font-bold mb-3 text-white">Acessórios</h3>
+                            <p class="text-zinc-400 font-light mb-4">O detalhe que subverte o comum.</p>
+                            <a href="#topo" class="inline-flex items-center gap-2 text-xs font-semibold text-rose-500 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                Destravar <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl md:col-span-3 h-[500px] bg-zinc-900 border border-zinc-800/50 card-glow transition-all duration-700">
+                        <img src="vitrine-assets/capsula-noturna.webp.jpg" 
+                             alt="Série Limitada" 
+                             class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-[2s] group-hover:scale-105 opacity-50 group-hover:opacity-80">
+                        <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent"></div>
+                        
+                        <div class="absolute inset-0 flex flex-col justify-center p-10 md:p-20 max-w-3xl">
+                            <div class="flex items-center gap-3 mb-6">
+                                <span class="w-8 h-[1px] bg-rose-500"></span>
+                                <span class="text-rose-500 font-semibold tracking-[0.2em] uppercase text-xs">A Joia da Coroa</span>
+                            </div>
+                            <h3 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white">Cápsula Noturna</h3>
+                            <p class="text-zinc-400 text-xl mb-10 font-light leading-relaxed max-w-xl">Apenas 50 unidades serão produzidas. Tecidos tecnológicos que se adaptam à temperatura e cortes agressivos.</p>
+                            
+                            <a href="#topo" class="inline-flex w-max items-center justify-center px-8 py-4 rounded-full bg-white text-zinc-950 font-bold hover:bg-rose-500 hover:text-white transition-all duration-500 group/btn">
+                                Voltar para Cadastro VIP
+                                <i data-lucide="arrow-up" class="w-5 h-5 ml-2 group-hover/btn:-translate-y-1 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -173,13 +255,13 @@
 
     </main>
 
-    <footer class="bg-zinc-950 border-t border-zinc-900 py-8 relative z-10">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-600">
-            <p>&copy; 2026 Lumina Apparel. Todos os direitos reservados.</p>
-            <div class="flex gap-6">
-                <a href="#" class="hover:text-zinc-400 transition-colors">Políticas de Privacidade</a>
-                <a href="#" class="hover:text-zinc-400 transition-colors">Termos de Uso</a>
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4 text-zinc-500"></i>
+                <span class="text-lg font-bold tracking-widest uppercase text-zinc-500">Lumina</span>
             </div>
+            <p class="text-xs text-zinc-600 uppercase tracking-widest font-medium">&copy; 2026 Lumina Apparel.</p>
         </div>
     </footer>
 
