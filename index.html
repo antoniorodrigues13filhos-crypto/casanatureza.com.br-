@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina - Coleção & Acesso VIP</title>
+    <title>Casa Natureza - Drop Exclusivo</title>
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
@@ -11,21 +11,22 @@
 
     <style type="text/tailwindcss">
         @theme {
-            --color-rose-50: #fff1f2;
-            --color-rose-500: #f43f5e;
-            --color-rose-600: #e11d48;
+            --color-green-50: #f0fdf4;
+            --color-green-400: #4ade80;
+            --color-green-500: #22c55e;
+            --color-green-600: #16a34a;
             --color-zinc-900: #18181b;
             --color-zinc-950: #09090b;
         }
     </style>
 
     <style>
-        /* Custom Scrollbar */
+        /* Custom Scrollbar - Adaptado para Verde */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #09090b; }
-        ::-webkit-scrollbar-thumb { background: #f43f5e; border-radius: 9999px; }
-        ::-webkit-scrollbar-thumb:hover { background: #e11d48; }
-        * { scrollbar-width: thin; scrollbar-color: #f43f5e #09090b; }
+        ::-webkit-scrollbar-thumb { background: #22c55e; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #16a34a; }
+        * { scrollbar-width: thin; scrollbar-color: #22c55e #09090b; }
 
         /* Motion Animations */
         @keyframes kenBurns {
@@ -59,28 +60,29 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
+        /* Glows adaptados para o verde da Casa Natureza */
         .text-glow {
-            text-shadow: 0 0 30px rgba(244, 63, 94, 0.4);
+            text-shadow: 0 0 30px rgba(34, 197, 94, 0.4);
         }
         
         .card-glow:hover {
-            box-shadow: 0 0 40px rgba(244, 63, 94, 0.15);
+            box-shadow: 0 0 40px rgba(34, 197, 94, 0.15);
         }
     </style>
 </head>
-<body class="bg-zinc-950 text-zinc-50 font-sans antialiased overflow-x-hidden selection:bg-rose-500 selection:text-white" id="topo">
+<body class="bg-zinc-950 text-zinc-50 font-sans antialiased overflow-x-hidden selection:bg-green-500 selection:text-white" id="topo">
 
     <header class="fixed top-0 left-0 right-0 z-50 glass-header transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#topo" class="flex items-center gap-2 z-50 group">
-                <div class="w-8 h-8 rounded-full bg-rose-500 flex items-center justify-center transition-transform group-hover:scale-110 shadow-[0_0_15px_rgba(244,63,94,0.5)]">
-                    <i data-lucide="sparkles" class="w-4 h-4 text-white"></i>
+                <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center transition-transform group-hover:scale-110 shadow-[0_0_15px_rgba(34,197,94,0.5)]">
+                    <i data-lucide="leaf" class="w-4 h-4 text-white"></i>
                 </div>
-                <img src="vitrine-assets/logo-lumina.png.webp" alt="Lumina" class="h-5 w-auto hidden sm:block opacity-90">
+                <img src="vitrine-assets/logo-natureza.png.webp" alt="Casa Natureza" class="h-5 w-auto hidden sm:block opacity-90">
             </a>
             
             <nav class="hidden md:flex items-center gap-8">
-                <a href="#colecoes" class="text-xs font-semibold text-zinc-400 hover:text-white transition-colors uppercase tracking-[0.2em]">O que está por vir</a>
+                <a href="#colecoes" class="text-xs font-semibold text-zinc-400 hover:text-white transition-colors uppercase tracking-[0.2em]">Lançamentos</a>
             </nav>
         </div>
     </header>
@@ -89,7 +91,7 @@
         <section class="relative min-h-screen flex items-center justify-center pt-20 pb-12 overflow-hidden border-b border-zinc-900">
             <div class="absolute inset-0 z-0">
                 <img src="vitrine-assets/hero-bg.webp.jpg" 
-                     alt="Moda em movimento" 
+                     alt="Saúde e Energia em movimento" 
                      class="w-full h-full object-cover object-center animate-ken-burns opacity-40">
                 <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent"></div>
                 <div class="absolute inset-0 bg-gradient-to-r from-zinc-950/90 md:via-zinc-950/50 to-transparent"></div>
@@ -100,19 +102,19 @@
                 <div class="max-w-xl animate-fade-in-up" style="animation-delay: 0.2s;">
                     <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-800 backdrop-blur-md mb-8">
                         <span class="relative flex h-2.5 w-2.5">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
                         </span>
-                        <span class="text-xs font-semibold tracking-[0.2em] uppercase text-zinc-300">Drop Exclusivo</span>
+                        <span class="text-xs font-semibold tracking-[0.2em] uppercase text-zinc-300">Nova Linha Premium</span>
                     </div>
                     
                     <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-[1.1] text-glow">
-                        Elegância <br/>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-300 to-zinc-600 italic font-light">em Movimento</span>
+                        Nutrição <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-300 to-zinc-600 italic font-light">em Alta Performance</span>
                     </h1>
                     
                     <p class="text-lg md:text-xl text-zinc-400 mb-8 leading-relaxed font-light">
-                        A coleção <strong>Cápsula Noturna</strong> está prestes a redefinir seu guarda-roupa. Destrave acesso 24h antes de todos e garanta <strong>15% OFF</strong>.
+                        A nova seleção de suplementos essenciais está prestes a ser revelada. Destrave acesso 24h antes de todos e garanta <strong>15% OFF</strong> na pré-venda.
                     </p>
 
                     <div class="hidden md:flex gap-8 text-sm text-zinc-500">
@@ -125,15 +127,15 @@
                             <span class="uppercase tracking-widest text-[10px]">Receba o Link VIP</span>
                         </div>
                         <div class="flex flex-col gap-1">
-                            <span class="text-rose-500 font-semibold text-xl">03</span>
-                            <span class="uppercase tracking-widest text-[10px]">Domine a Noite</span>
+                            <span class="text-green-500 font-semibold text-xl">03</span>
+                            <span class="uppercase tracking-widest text-[10px]">Viva o Natural</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="w-full max-w-md mx-auto lg:ml-auto animate-fade-in-up" style="animation-delay: 0.4s;">
                     <div class="glass-panel rounded-[2rem] p-8 md:p-10 shadow-2xl relative">
-                        <div class="absolute top-0 right-0 w-full h-1/2 bg-gradient-to-b from-rose-500/10 to-transparent rounded-t-[2rem] pointer-events-none"></div>
+                        <div class="absolute top-0 right-0 w-full h-1/2 bg-gradient-to-b from-green-500/10 to-transparent rounded-t-[2rem] pointer-events-none"></div>
                         
                         <div class="text-center mb-8 relative z-10">
                             <h2 class="text-2xl font-semibold text-white tracking-tight mb-2">Convite Restrito</h2>
@@ -146,7 +148,7 @@
                                     <i data-lucide="user" class="w-5 h-5 text-zinc-500"></i>
                                 </div>
                                 <input type="text" id="nome" name="nome" required placeholder="Seu nome" 
-                                       class="w-full bg-zinc-900/50 border border-zinc-700/50 text-white rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:border-rose-500 focus:bg-zinc-900 transition-all placeholder:text-zinc-600">
+                                       class="w-full bg-zinc-900/50 border border-zinc-700/50 text-white rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:border-green-500 focus:bg-zinc-900 transition-all placeholder:text-zinc-600">
                             </div>
                             
                             <div class="relative">
@@ -154,7 +156,7 @@
                                     <i data-lucide="mail" class="w-5 h-5 text-zinc-500"></i>
                                 </div>
                                 <input type="email" id="email" name="email" required placeholder="Seu melhor e-mail" 
-                                       class="w-full bg-zinc-900/50 border border-zinc-700/50 text-white rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:border-rose-500 focus:bg-zinc-900 transition-all placeholder:text-zinc-600">
+                                       class="w-full bg-zinc-900/50 border border-zinc-700/50 text-white rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:border-green-500 focus:bg-zinc-900 transition-all placeholder:text-zinc-600">
                             </div>
 
                             <div class="relative">
@@ -162,10 +164,10 @@
                                     <i data-lucide="smartphone" class="w-5 h-5 text-zinc-500"></i>
                                 </div>
                                 <input type="tel" id="whatsapp" name="whatsapp" required placeholder="WhatsApp com DDD" 
-                                       class="w-full bg-zinc-900/50 border border-zinc-700/50 text-white rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:border-rose-500 focus:bg-zinc-900 transition-all placeholder:text-zinc-600">
+                                       class="w-full bg-zinc-900/50 border border-zinc-700/50 text-white rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:border-green-500 focus:bg-zinc-900 transition-all placeholder:text-zinc-600">
                             </div>
 
-                            <button type="submit" class="w-full bg-white text-zinc-950 font-bold text-lg py-4 rounded-xl hover:bg-rose-500 hover:text-white hover:shadow-[0_0_30px_rgba(244,63,94,0.3)] transition-all duration-500 mt-2 flex justify-center items-center gap-2 group">
+                            <button type="submit" class="w-full bg-white text-zinc-950 font-bold text-lg py-4 rounded-xl hover:bg-green-500 hover:text-white hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-500 mt-2 flex justify-center items-center gap-2 group">
                                 Destravar Acesso
                                 <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                             </button>
@@ -180,7 +182,7 @@
 
             <a href="#colecoes" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 opacity-50 hover:opacity-100 transition-opacity">
                 <span class="text-[10px] uppercase tracking-[0.3em] font-medium">Sneak Peek</span>
-                <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce text-rose-500"></i>
+                <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce text-green-500"></i>
             </a>
         </section>
 
@@ -189,7 +191,7 @@
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
                     <div class="max-w-2xl">
                         <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">O que está em <span class="italic font-light text-zinc-500">jogo.</span></h2>
-                        <p class="text-zinc-400 text-lg font-light leading-relaxed">Conheça as peças que farão parte do drop exclusivo. Design cirúrgico e matérias-primas que elevam a sua presença.</p>
+                        <p class="text-zinc-400 text-lg font-light leading-relaxed">Conheça as formulações que farão parte do drop exclusivo. Matérias-primas puras que elevam a sua performance diária.</p>
                     </div>
                 </div>
 
@@ -197,16 +199,16 @@
                     
                     <div class="group relative overflow-hidden rounded-3xl md:col-span-2 bg-zinc-900 border border-zinc-800/50 card-glow transition-all duration-700 cursor-pointer">
                         <img src="vitrine-assets/linha-urbana.webp.jpg" 
-                             alt="Linha Urbana" 
+                             alt="Colágeno Tipo II" 
                              class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105 opacity-60 group-hover:opacity-100 grayscale-[30%] group-hover:grayscale-0">
                         <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-700"></div>
                         
                         <div class="absolute bottom-0 left-0 p-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
                             <span class="inline-block px-4 py-1.5 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-[10px] font-semibold uppercase tracking-widest text-zinc-300 mb-4">Essencial Elevado</span>
-                            <h3 class="text-3xl font-bold mb-3 text-white">Linha Urbana</h3>
+                            <h3 class="text-3xl font-bold mb-3 text-white">Complexo Articular</h3>
                             <div class="flex items-center justify-between">
-                                <p class="text-zinc-400 font-light max-w-sm">Alfaiataria desconstruída para transitar entre o estúdio e as ruas.</p>
-                                <a href="#topo" class="w-12 h-12 rounded-full bg-white text-zinc-950 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 hover:bg-rose-500 hover:text-white">
+                                <p class="text-zinc-400 font-light max-w-sm">Colágeno Tipo II aliado ao Ácido Hialurônico para máxima proteção.</p>
+                                <a href="#topo" class="w-12 h-12 rounded-full bg-white text-zinc-950 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 hover:bg-green-500 hover:text-white">
                                     <i data-lucide="lock" class="w-5 h-5"></i>
                                 </a>
                             </div>
@@ -215,15 +217,15 @@
 
                     <div class="group relative overflow-hidden rounded-3xl bg-zinc-900 border border-zinc-800/50 card-glow transition-all duration-700 cursor-pointer">
                         <img src="vitrine-assets/acessorios.webp.jpg" 
-                             alt="Acessórios" 
+                             alt="Coenzima Q10" 
                              class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105 opacity-60 group-hover:opacity-100 grayscale-[30%] group-hover:grayscale-0">
                         <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-700"></div>
                         
                         <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
-                            <span class="inline-block px-4 py-1.5 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-[10px] font-semibold uppercase tracking-widest text-zinc-300 mb-4">Couro Premium</span>
-                            <h3 class="text-2xl font-bold mb-3 text-white">Acessórios</h3>
-                            <p class="text-zinc-400 font-light mb-4">O detalhe que subverte o comum.</p>
-                            <a href="#topo" class="inline-flex items-center gap-2 text-xs font-semibold text-rose-500 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <span class="inline-block px-4 py-1.5 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-[10px] font-semibold uppercase tracking-widest text-zinc-300 mb-4">Energia Celular</span>
+                            <h3 class="text-2xl font-bold mb-3 text-white">Coenzima Q10</h3>
+                            <p class="text-zinc-400 font-light mb-4">O detalhe que subverte o cansaço comum.</p>
+                            <a href="#topo" class="inline-flex items-center gap-2 text-xs font-semibold text-green-500 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 Destravar <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                             </a>
                         </div>
@@ -231,19 +233,19 @@
 
                     <div class="group relative overflow-hidden rounded-3xl md:col-span-3 h-[500px] bg-zinc-900 border border-zinc-800/50 card-glow transition-all duration-700">
                         <img src="vitrine-assets/capsula-noturna.webp.jpg" 
-                             alt="Série Limitada" 
+                             alt="Creatina Pura" 
                              class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-[2s] group-hover:scale-105 opacity-50 group-hover:opacity-80">
                         <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent"></div>
                         
                         <div class="absolute inset-0 flex flex-col justify-center p-10 md:p-20 max-w-3xl">
                             <div class="flex items-center gap-3 mb-6">
-                                <span class="w-8 h-[1px] bg-rose-500"></span>
-                                <span class="text-rose-500 font-semibold tracking-[0.2em] uppercase text-xs">A Joia da Coroa</span>
+                                <span class="w-8 h-[1px] bg-green-500"></span>
+                                <span class="text-green-500 font-semibold tracking-[0.2em] uppercase text-xs">A Força Pura</span>
                             </div>
-                            <h3 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white">Cápsula Noturna</h3>
-                            <p class="text-zinc-400 text-xl mb-10 font-light leading-relaxed max-w-xl">Apenas 50 unidades serão produzidas. Tecidos tecnológicos que se adaptam à temperatura e cortes agressivos.</p>
+                            <h3 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white">Creatina Monohidratada 100%</h3>
+                            <p class="text-zinc-400 text-xl mb-10 font-light leading-relaxed max-w-xl">Lotes limitados. Matéria-prima importada para quem busca força explosiva e recuperação imediata.</p>
                             
-                            <a href="#topo" class="inline-flex w-max items-center justify-center px-8 py-4 rounded-full bg-white text-zinc-950 font-bold hover:bg-rose-500 hover:text-white transition-all duration-500 group/btn">
+                            <a href="#topo" class="inline-flex w-max items-center justify-center px-8 py-4 rounded-full bg-white text-zinc-950 font-bold hover:bg-green-500 hover:text-white transition-all duration-500 group/btn">
                                 Voltar para Cadastro VIP
                                 <i data-lucide="arrow-up" class="w-5 h-5 ml-2 group-hover/btn:-translate-y-1 transition-transform"></i>
                             </a>
@@ -258,10 +260,10 @@
     <footer class="bg-zinc-950 border-t border-zinc-900 py-12 relative z-10">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center gap-2">
-                <i data-lucide="sparkles" class="w-4 h-4 text-zinc-500"></i>
-                <span class="text-lg font-bold tracking-widest uppercase text-zinc-500">Lumina</span>
+                <i data-lucide="leaf" class="w-4 h-4 text-zinc-500"></i>
+                <span class="text-lg font-bold tracking-widest uppercase text-zinc-500">Casa Natureza</span>
             </div>
-            <p class="text-xs text-zinc-600 uppercase tracking-widest font-medium">&copy; 2026 Lumina Apparel.</p>
+            <p class="text-xs text-zinc-600 uppercase tracking-widest font-medium">&copy; 2026 Casa Natureza Produtos Naturais e Suplementação.</p>
         </div>
     </footer>
 
